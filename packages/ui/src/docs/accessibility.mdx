@@ -1,0 +1,24 @@
+import { Meta, Title, Description } from "@storybook/blocks";
+import * as AccessibilityStories from "./accessibility.stories.tsx";
+
+<Meta of={AccessibilityStories} />
+
+<Title>Accessibility</Title>
+<Description>
+  Components follow WAI-ARIA patterns and expose focus-visible styles using
+  tokens. Stories include disabled, error, and focusable states.
+</Description>
+
+## Focus
+
+- `--ds-focus-ring-color` and `--ds-focus-ring-width` are used for outlines.
+- Use keyboard navigation to verify focus visibility in Storybook.
+
+## ARIA
+
+- Form fields use `aria-invalid` and `aria-describedby` when appropriate.
+- Dialogs use `role="dialog"` and `aria-modal`.
+
+## TODO / Missing Specs
+
+- No dark mode focus styles specified yet.

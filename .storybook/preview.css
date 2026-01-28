@@ -1,0 +1,11 @@
+@import "../packages/tokens/src/tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+  background: var(--ds-bg-page);
+  color: var(--ds-text-primary);
+}

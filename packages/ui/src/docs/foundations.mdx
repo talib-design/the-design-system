@@ -1,0 +1,22 @@
+import { Meta, Title, Description } from "@storybook/blocks";
+import * as FoundationsStories from "./foundations.stories.tsx";
+
+<Meta of={FoundationsStories} />
+
+<Title>Foundations</Title>
+<Description>
+  This Design System is tokens-first. All component styles map to CSS variables
+  generated from Figma tokens. Avoid custom values outside the tokens set.
+</Description>
+
+## Principles
+
+- Use semantic tokens (`--ds-text-*`, `--ds-bg-*`, `--ds-border-*`) before
+  primitives.
+- Prefer component tokens (`--ds-button-*`, `--ds-input-*`) when available.
+- Avoid ad-hoc colors, spacing, or shadows in components and docs.
+
+## TODO / Missing Specs
+
+- Dark mode tokens are not available yet.
+- Component variants beyond those listed in code are not specified in Figma.

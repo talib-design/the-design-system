@@ -1,0 +1,182 @@
+import { Meta, Title, Description } from "@storybook/blocks";
+import * as TokensStories from "./tokens.stories.tsx";
+import primitives from "../../../tokens/src/primitives.json";
+import semantics from "../../../tokens/src/semantics.json";
+
+export const toVar = (path) =>
+  `--ds-${path.map((key) => String(key).replace(".", "_")).join("-")}`;
+
+export const flattenTokens = (obj, path = []) =>
+  Object.entries(obj).flatMap(([key, value]) => {
+    if (value && typeof value === "object" && "value" in value) {
+      return [{ path: [...path, key], value: value.value }];
+    }
+    return flattenTokens(value, [...path, key]);
+  });
+
+export const typographyTokens = (group, prefix) =>
+  Object.entries(group).map(([name, token]) => {
+    const base = ["typography", prefix, name];
+    return {
+      name: `${prefix}.${name}`,
+      fontFamily: toVar([...base, "font-family"]),
+      fontWeight: toVar([...base, "font-weight"]),
+      fontSize: toVar([...base, "font-size"]),
+      lineHeight: toVar([...base, "line-height"]),
+      fontStyle: token.fontStyle || "normal"
+    };
+  });
+
+export const colorTokens = [
+  ...flattenTokens(primitives.color, ["color"]),
+  ...flattenTokens(semantics.text, ["text"]),
+  ...flattenTokens(semantics.bg, ["bg"]),
+  ...flattenTokens(semantics.border, ["border"]),
+  ...flattenTokens(semantics.icon, ["icon"])
+];
+
+export const spacingTokens = flattenTokens(primitives.space, ["space"]);
+export const radiusTokens = flattenTokens(primitives.radius, ["radius"]);
+export const shadowTokens = flattenTokens(primitives.shadow, ["shadow"]);
+
+export const headingTypography = typographyTokens(semantics.typography.heading, "heading");
+export const paragraphTypography = typographyTokens(semantics.typography.paragraph, "paragraph");
+
+<Meta of={TokensStories} />
+
+<Title>Design Tokens</Title>
+<Description>
+  Tokens are the single source of truth. This page lists primitive and semantic
+  tokens with their CSS variable names and a live preview where applicable.
+</Description>
+
+## Colors
+
+<div className="grid gap-[var(--ds-space-2)]">
+  {colorTokens.map(({ path, value }) => {
+    const cssVar = toVar(path);
+    return (
+      <div
+        key={cssVar}
+        className="flex items-center gap-[var(--ds-space-3)] rounded-[var(--ds-radius-md)] border border-[var(--ds-border-light)] bg-[var(--ds-bg-layer100)] p-[var(--ds-space-2)]"
+      >
+        <div
+          className="h-[32px] w-[32px] rounded-[var(--ds-radius-sm)] border border-[var(--ds-border-light)]"
+          style={{ background: `var(${cssVar})` }}
+        />
+        <div className="min-w-0">
+          <div className="text-sm font-semibold">{path.join(".")}</div>
+          <div className="text-xs text-[var(--ds-text-secondary)]">
+            {cssVar} {value ? `• ${value}` : ""}
+          </div>
+        </div>
+      </div>
+    );
+  })}
+</div>
+
+## Typography
+
+<div className="grid gap-[var(--ds-space-4)]">
+  {[...headingTypography, ...paragraphTypography].map((token) => (
+    <div
+      key={token.name}
+      className="rounded-[var(--ds-radius-md)] border border-[var(--ds-border-light)] bg-[var(--ds-bg-layer100)] p-[var(--ds-space-3)]"
+    >
+      <div className="text-xs uppercase text-[var(--ds-text-secondary)]">
+        {token.name}
+      </div>
+      <div
+        style={{
+          fontFamily: `var(${token.fontFamily})`,
+          fontWeight: `var(${token.fontWeight})`,
+          fontSize: `var(${token.fontSize})`,
+          lineHeight: `var(${token.lineHeight})`,
+          fontStyle: token.fontStyle
+        }}
+      >
+        The quick brown fox jumps over the lazy dog.
+      </div>
+      <div className="mt-[var(--ds-space-1)] text-xs text-[var(--ds-text-secondary)]">
+        {token.fontFamily}, {token.fontWeight}, {token.fontSize},{" "}
+        {token.lineHeight}
+      </div>
+    </div>
+  ))}
+</div>
+
+## Spacing
+
+<div className="grid gap-[var(--ds-space-2)]">
+  {spacingTokens.map(({ path, value }) => {
+    const cssVar = toVar(path);
+    return (
+      <div
+        key={cssVar}
+        className="flex items-center gap-[var(--ds-space-3)] rounded-[var(--ds-radius-md)] border border-[var(--ds-border-light)] bg-[var(--ds-bg-layer100)] p-[var(--ds-space-2)]"
+      >
+        <div className="text-sm font-semibold">{path.join(".")}</div>
+        <div className="text-xs text-[var(--ds-text-secondary)]">
+          {cssVar} • {value}
+        </div>
+        <div
+          className="h-[10px] rounded-[var(--ds-radius-sm)] bg-[var(--ds-bg-brand-filled-default)]"
+          style={{ width: `var(${cssVar})` }}
+        />
+      </div>
+    );
+  })}
+</div>
+
+## Radius
+
+<div className="grid gap-[var(--ds-space-2)]">
+  {radiusTokens.map(({ path, value }) => {
+    const cssVar = toVar(path);
+    return (
+      <div
+        key={cssVar}
+        className="flex items-center gap-[var(--ds-space-3)] rounded-[var(--ds-radius-md)] border border-[var(--ds-border-light)] bg-[var(--ds-bg-layer100)] p-[var(--ds-space-2)]"
+      >
+        <div
+          className="h-[32px] w-[32px] border border-[var(--ds-border-light)] bg-[var(--ds-bg-layer100)]"
+          style={{ borderRadius: `var(${cssVar})` }}
+        />
+        <div className="min-w-0">
+          <div className="text-sm font-semibold">{path.join(".")}</div>
+          <div className="text-xs text-[var(--ds-text-secondary)]">
+            {cssVar} • {value}
+          </div>
+        </div>
+      </div>
+    );
+  })}
+</div>
+
+## Shadows
+
+<div className="grid gap-[var(--ds-space-3)]">
+  {shadowTokens.map(({ path }) => {
+    const cssVar = toVar(path);
+    return (
+      <div
+        key={cssVar}
+        className="flex items-center gap-[var(--ds-space-3)] rounded-[var(--ds-radius-md)] border border-[var(--ds-border-light)] bg-[var(--ds-bg-layer100)] p-[var(--ds-space-2)]"
+      >
+        <div
+          className="h-[40px] w-[40px] rounded-[var(--ds-radius-sm)] bg-[var(--ds-bg-layer100)]"
+          style={{ boxShadow: `var(${cssVar})` }}
+        />
+        <div className="min-w-0">
+          <div className="text-sm font-semibold">{path.join(".")}</div>
+          <div className="text-xs text-[var(--ds-text-secondary)]">{cssVar}</div>
+        </div>
+      </div>
+    );
+  })}
+</div>
+
+## Themes / Modes
+
+Light mode is the only mode available in the current tokens set. If dark mode
+tokens are added later, a global theme switcher will be enabled in Storybook.

@@ -1,0 +1,189 @@
+{
+  "button": {
+    "size": {
+      "default": {
+        "radius": { "value": "{radius.xl}", "figma": { "nodes": ["12514:244"] } },
+        "paddingX": { "value": "{space.5}", "figma": { "nodes": ["12514:244"] } },
+        "paddingY": { "value": "{space.3}", "figma": { "nodes": ["12514:244"] } },
+        "gap": { "value": "{space.2}", "figma": { "nodes": ["12514:244"] } }
+      },
+      "small": {
+        "radius": { "value": "{radius.lg}", "figma": { "nodes": ["12514:256"] } },
+        "paddingX": { "value": "{space.4}", "figma": { "nodes": ["12514:256"] } },
+        "paddingY": { "value": "{space.2}", "figma": { "nodes": ["12514:256"] } },
+        "gap": { "value": "{space.2}", "figma": { "nodes": ["12514:256"] } }
+      }
+    },
+    "variant": {
+      "color": {
+        "default": {
+          "bg": { "value": "{bg.brand.filled.default}", "figma": { "nodes": ["12514:244"] } },
+          "text": { "value": "{text.invert}", "figma": { "nodes": ["12514:244"] } }
+        },
+        "hover": {
+          "bg": { "value": "{bg.brand.filled.hover}", "figma": { "nodes": ["12514:247"] } },
+          "text": { "value": "{text.invert}", "figma": { "nodes": ["12514:247"] } },
+          "shadow": { "value": "{shadow.brand.lg}", "figma": { "nodes": ["12514:247"] } }
+        },
+        "pressed": {
+          "bg": { "value": "{bg.brand.filled.active}", "figma": { "nodes": ["12514:250"] } },
+          "text": { "value": "{text.invert}", "figma": { "nodes": ["12514:250"] } }
+        },
+        "disabled": {
+          "bg": { "value": "{bg.brand.filled.default}", "figma": { "nodes": ["12514:253"] } },
+          "text": { "value": "{text.invert}", "figma": { "nodes": ["12514:253"] } },
+          "opacity": { "value": "{opacity.disabled}", "figma": { "nodes": ["12514:253"] } }
+        }
+      },
+      "outline": {
+        "default": {
+          "bg": { "value": "{bg.brand.transparent.default}", "figma": { "nodes": ["12514:269"] } },
+          "text": { "value": "{text.brand}", "figma": { "nodes": ["12514:269"] } },
+          "borderWidth": { "value": "{border.base}", "figma": { "nodes": ["12514:269"] } },
+          "borderColor": { "value": "{border.brand}", "figma": { "nodes": ["12514:269"] } }
+        },
+        "hover": {
+          "bg": { "value": "{bg.brand.transparent.hover}", "figma": { "nodes": ["12514:272"] } },
+          "text": { "value": "{text.brand}", "figma": { "nodes": ["12514:272"] } },
+          "borderWidth": { "value": "{border.md}", "figma": { "nodes": ["12514:272"] } },
+          "borderColor": { "value": "{border.brand}", "figma": { "nodes": ["12514:272"] } },
+          "shadow": { "value": "{shadow.brand.lg}", "figma": { "nodes": ["12514:272"] } }
+        },
+        "pressed": {
+          "bg": { "value": "{bg.brand.transparent.active}", "figma": { "nodes": ["12514:275"] } },
+          "text": { "value": "{text.brand}", "figma": { "nodes": ["12514:275"] } },
+          "borderWidth": { "value": "{border.base}", "figma": { "nodes": ["12514:275"] } },
+          "borderColor": { "value": "{border.brand}", "figma": { "nodes": ["12514:275"] } }
+        },
+        "disabled": {
+          "bg": { "value": "{bg.brand.transparent.default}", "figma": { "nodes": ["12514:278"] } },
+          "text": { "value": "{text.brand}", "figma": { "nodes": ["12514:278"] } },
+          "borderWidth": { "value": "{border.base}", "figma": { "nodes": ["12514:278"] } },
+          "borderColor": { "value": "{border.brand}", "figma": { "nodes": ["12514:278"] } },
+          "opacity": { "value": "{opacity.disabled}", "figma": { "nodes": ["12514:278"] } }
+        }
+      },
+      "text": {
+        "default": {
+          "bg": { "value": "{bg.brand.transparent.default}", "figma": { "nodes": ["12514:294"] } },
+          "text": { "value": "{text.brand}", "figma": { "nodes": ["12514:294"] } }
+        },
+        "hover": {
+          "bg": { "value": "{bg.brand.transparent.hover}", "figma": { "nodes": ["12514:297"] } },
+          "text": { "value": "{text.brand}", "figma": { "nodes": ["12514:297"] } }
+        },
+        "pressed": {
+          "bg": { "value": "{bg.brand.transparent.active}", "figma": { "nodes": ["12514:300"] } },
+          "text": { "value": "{text.brand}", "figma": { "nodes": ["12514:300"] } }
+        },
+        "disabled": {
+          "bg": { "value": "{bg.brand.transparent.default}", "figma": { "nodes": ["12514:303"] } },
+          "text": { "value": "{text.brand}", "figma": { "nodes": ["12514:303"] } },
+          "opacity": { "value": "{opacity.disabled}", "figma": { "nodes": ["12514:303"] } }
+        }
+      }
+    }
+  },
+  "input": {
+    "base": {
+      "radius": { "value": "{radius.xl}", "figma": { "nodes": ["23:344"] } },
+      "paddingX": { "value": "{space.4}", "figma": { "nodes": ["23:344"] } },
+      "paddingY": { "value": "{space.3}", "figma": { "nodes": ["23:344"] } },
+      "gap": { "value": "{space.4}", "figma": { "nodes": ["23:344"] } }
+    },
+    "state": {
+      "default": {
+        "bg": { "value": "{color.neutral.white}", "figma": { "nodes": ["23:344"] } },
+        "borderWidth": { "value": "{border.base}", "figma": { "nodes": ["23:344"] } },
+        "borderColor": { "value": "{border.default}", "figma": { "nodes": ["23:344"] } },
+        "label": { "value": "{text.secondary}", "figma": { "nodes": ["23:344"] } },
+        "text": { "value": "{text.placeholder}", "figma": { "nodes": ["23:344"] } },
+        "helper": { "value": "{text.secondary}", "figma": { "nodes": ["23:344"] } }
+      },
+      "hover": {
+        "bg": { "value": "{color.neutral.white}", "figma": { "nodes": ["12514:789"] } },
+        "borderWidth": { "value": "{border.base}", "figma": { "nodes": ["12514:789"] } },
+        "borderColor": { "value": "{border.strong}", "figma": { "nodes": ["12514:789"] } },
+        "label": { "value": "{text.primary}", "figma": { "nodes": ["12514:789"] } },
+        "text": { "value": "{text.primary}", "figma": { "nodes": ["12514:789"] } },
+        "helper": { "value": "{text.secondary}", "figma": { "nodes": ["12514:789"] } }
+      },
+      "active": {
+        "bg": { "value": "{color.neutral.white}", "figma": { "nodes": ["8484:1488"] } },
+        "borderWidth": { "value": "{border.md}", "figma": { "nodes": ["8484:1488"] } },
+        "borderColor": { "value": "{border.brand}", "figma": { "nodes": ["8484:1488"] } },
+        "label": { "value": "{text.secondary}", "figma": { "nodes": ["8484:1488"] } },
+        "text": { "value": "{text.primary}", "figma": { "nodes": ["8484:1488"] } },
+        "helper": { "value": "{text.secondary}", "figma": { "nodes": ["8484:1488"] } }
+      },
+      "filled": {
+        "bg": { "value": "{color.neutral.white}", "figma": { "nodes": ["29:1064"] } },
+        "borderWidth": { "value": "{border.base}", "figma": { "nodes": ["29:1064"] } },
+        "borderColor": { "value": "{border.strong}", "figma": { "nodes": ["29:1064"] } },
+        "label": { "value": "{text.secondary}", "figma": { "nodes": ["29:1064"] } },
+        "text": { "value": "{text.primary}", "figma": { "nodes": ["29:1064"] } },
+        "helper": { "value": "{text.secondary}", "figma": { "nodes": ["29:1064"] } }
+      },
+      "error": {
+        "bg": { "value": "{color.neutral.white}", "figma": { "nodes": ["29:1074"] } },
+        "borderWidth": { "value": "{border.base}", "figma": { "nodes": ["29:1074"] } },
+        "borderColor": { "value": "{border.danger}", "figma": { "nodes": ["29:1074"] } },
+        "label": { "value": "{text.danger}", "figma": { "nodes": ["29:1074"] } },
+        "text": { "value": "{text.primary}", "figma": { "nodes": ["29:1074"] } },
+        "helper": { "value": "{text.danger}", "figma": { "nodes": ["29:1074"] } }
+      },
+      "disabled": {
+        "bg": { "value": "{color.neutral.50}", "figma": { "nodes": ["8520:1426"] } },
+        "borderWidth": { "value": "{border.base}", "figma": { "nodes": ["8520:1426"] } },
+        "borderColor": { "value": "{border.default}", "figma": { "nodes": ["8520:1426"] } },
+        "label": { "value": "{text.secondary}", "figma": { "nodes": ["8520:1426"] } },
+        "text": { "value": "{text.placeholder}", "figma": { "nodes": ["8520:1426"] } },
+        "helper": { "value": "{text.secondary}", "figma": { "nodes": ["8520:1426"] } },
+        "opacity": { "value": "{opacity.disabled}", "figma": { "nodes": ["8520:1426"] } }
+      },
+      "disabled-filled": {
+        "bg": { "value": "{color.neutral.50}", "figma": { "nodes": ["12514:812"] } },
+        "borderWidth": { "value": "{border.base}", "figma": { "nodes": ["12514:812"] } },
+        "borderColor": { "value": "{border.strong}", "figma": { "nodes": ["12514:812"] } },
+        "label": { "value": "{text.secondary}", "figma": { "nodes": ["12514:812"] } },
+        "text": { "value": "{text.primary}", "figma": { "nodes": ["12514:812"] } },
+        "helper": { "value": "{text.secondary}", "figma": { "nodes": ["12514:812"] } },
+        "opacity": { "value": "{opacity.disabled}", "figma": { "nodes": ["12514:812"] } }
+      },
+      "readonly": {
+        "bg": { "value": "transparent", "figma": { "nodes": ["12514:822"] } },
+        "borderWidth": { "value": "0px", "figma": { "nodes": ["12514:822"] } },
+        "borderColor": { "value": "transparent", "figma": { "nodes": ["12514:822"] } },
+        "label": { "value": "{text.secondary}", "figma": { "nodes": ["12514:822"] } },
+        "text": { "value": "{text.primary}", "figma": { "nodes": ["12514:822"] } }
+      }
+    }
+  },
+  "card": {
+    "size": {
+      "sm": {
+        "radius": { "value": "{radius.lg}", "figma": { "nodes": ["12726:321"] } },
+        "padding": { "value": "{space.3}", "figma": { "nodes": ["12726:321"] } },
+        "gap": { "value": "{space.3}", "figma": { "nodes": ["12726:321"] } },
+        "title": { "value": "{typography.heading.xl}", "figma": { "nodes": ["12726:321"] } }
+      },
+      "md": {
+        "radius": { "value": "{radius.lg}", "figma": { "nodes": ["12650:1049"] } },
+        "padding": { "value": "{space.4}", "figma": { "nodes": ["12650:1049"] } },
+        "gap": { "value": "{space.4}", "figma": { "nodes": ["12650:1049"] } },
+        "title": { "value": "{typography.heading.xl}", "figma": { "nodes": ["12650:1049"] } }
+      },
+      "lg": {
+        "radius": { "value": "{radius.lg}", "figma": { "nodes": ["12651:1067"] } },
+        "padding": { "value": "{space.6}", "figma": { "nodes": ["12651:1067"] } },
+        "gap": { "value": "{space.4}", "figma": { "nodes": ["12651:1067"] } },
+        "title": { "value": "{typography.heading.3xl}", "figma": { "nodes": ["12651:1067"] } }
+      }
+    },
+    "base": {
+      "bg": { "value": "{bg.layer100}", "figma": { "nodes": ["12726:321", "12650:1049", "12651:1067"] } },
+      "borderColor": { "value": "{border.light}", "figma": { "nodes": ["12726:321", "12650:1049", "12651:1067"] } },
+      "borderWidth": { "value": "{border.base}", "figma": { "nodes": ["12726:321", "12650:1049", "12651:1067"] } }
+    }
+  }
+}

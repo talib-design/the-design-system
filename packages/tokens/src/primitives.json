@@ -1,0 +1,244 @@
+{
+  "color": {
+    "vert-luxy": {
+      "50": { "value": "#effefd", "figma": { "name": "Colors/Vert Luxy/50", "collection": "Colors" } },
+      "100": { "value": "#c7fffa", "figma": { "name": "Colors/Vert Luxy/100", "collection": "Colors" } },
+      "200": { "value": "#90fff5", "figma": { "name": "Colors/Vert Luxy/200", "collection": "Colors" } },
+      "300": { "value": "#51f7f0", "figma": { "name": "Colors/Vert Luxy/300", "collection": "Colors" } },
+      "400": { "value": "#1de4e1", "figma": { "name": "Colors/Vert Luxy/400", "collection": "Colors" } },
+      "500": { "value": "#04c8c8", "figma": { "name": "Colors/Vert Luxy/500", "collection": "Colors" } },
+      "600": { "value": "#00acb0", "figma": { "name": "Colors/Vert Luxy/600", "collection": "Colors" } },
+      "700": { "value": "#057c80", "figma": { "name": "Colors/Vert Luxy/700", "collection": "Colors" } },
+      "800": { "value": "#0a6165", "figma": { "name": "Colors/Vert Luxy/800", "collection": "Colors" } },
+      "900": { "value": "#0d5154", "figma": { "name": "Colors/Vert Luxy/900", "collection": "Colors" } },
+      "950": { "value": "#002e33", "figma": { "name": "Colors/Vert Luxy/950", "collection": "Colors" } }
+    },
+    "purple": {
+      "50": { "value": "#f3f2ff", "figma": { "name": "Colors/Purple/50", "collection": "Colors" } },
+      "100": { "value": "#e9e8ff", "figma": { "name": "Colors/Purple/100", "collection": "Colors" } },
+      "200": { "value": "#d6d4ff", "figma": { "name": "Colors/Purple/200", "collection": "Colors" } },
+      "300": { "value": "#b7b2ff", "figma": { "name": "Colors/Purple/300", "collection": "Colors" } },
+      "400": { "value": "#9486ff", "figma": { "name": "Colors/Purple/400", "collection": "Colors" } },
+      "500": { "value": "#7055fd", "figma": { "name": "Colors/Purple/500", "collection": "Colors" } },
+      "600": { "value": "#6338f5", "figma": { "name": "Colors/Purple/600", "collection": "Colors" } },
+      "700": { "value": "#5020e1", "figma": { "name": "Colors/Purple/700", "collection": "Colors" } },
+      "800": { "value": "#431bbc", "figma": { "name": "Colors/Purple/800", "collection": "Colors" } },
+      "900": { "value": "#39189a", "figma": { "name": "Colors/Purple/900", "collection": "Colors" } },
+      "950": { "value": "#200c69", "figma": { "name": "Colors/Purple/950", "collection": "Colors" } }
+    },
+    "blue": {
+      "50": { "value": "#eff7ff", "figma": { "name": "Colors/Blue/50", "collection": "Colors" } },
+      "100": { "value": "#dcebfd", "figma": { "name": "Colors/Blue/100", "collection": "Colors" } },
+      "200": { "value": "#cee5fd", "figma": { "name": "Colors/Blue/200", "collection": "Colors" } },
+      "300": { "value": "#96c9fa", "figma": { "name": "Colors/Blue/300", "collection": "Colors" } },
+      "400": { "value": "#64acf6", "figma": { "name": "Colors/Blue/400", "collection": "Colors" } },
+      "500": { "value": "#408bf1", "figma": { "name": "Colors/Blue/500", "collection": "Colors" } },
+      "600": { "value": "#2a6de6", "figma": { "name": "Colors/Blue/600", "collection": "Colors" } },
+      "700": { "value": "#2258d3", "figma": { "name": "Colors/Blue/700", "collection": "Colors" } },
+      "800": { "value": "#2248ab", "figma": { "name": "Colors/Blue/800", "collection": "Colors" } },
+      "900": { "value": "#214087", "figma": { "name": "Colors/Blue/900", "collection": "Colors" } },
+      "950": { "value": "#182953", "figma": { "name": "Colors/Blue/950", "collection": "Colors" } }
+    },
+    "yellow": {
+      "50": { "value": "#fefae8", "figma": { "name": "Colors/Yellow/50", "collection": "Colors" } },
+      "100": { "value": "#fef4c3", "figma": { "name": "Colors/Yellow/100", "collection": "Colors" } },
+      "200": { "value": "#ffe689", "figma": { "name": "Colors/Yellow/200", "collection": "Colors" } },
+      "300": { "value": "#fecc38", "figma": { "name": "Colors/Yellow/300", "collection": "Colors" } },
+      "400": { "value": "#fbb714", "figma": { "name": "Colors/Yellow/400", "collection": "Colors" } },
+      "500": { "value": "#eb9f07", "figma": { "name": "Colors/Yellow/500", "collection": "Colors" } },
+      "600": { "value": "#cb7703", "figma": { "name": "Colors/Yellow/600", "collection": "Colors" } },
+      "700": { "value": "#a25306", "figma": { "name": "Colors/Yellow/700", "collection": "Colors" } },
+      "800": { "value": "#86420d", "figma": { "name": "Colors/Yellow/800", "collection": "Colors" } },
+      "900": { "value": "#723611", "figma": { "name": "Colors/Yellow/900", "collection": "Colors" } },
+      "950": { "value": "#421a06", "figma": { "name": "Colors/Yellow/950", "collection": "Colors" } }
+    },
+    "green": {
+      "50": { "value": "#f2fcf1", "figma": { "name": "Colors/Green/50", "collection": "Colors" } },
+      "100": { "value": "#d4f8d3", "figma": { "name": "Colors/Green/100", "collection": "Colors" } },
+      "200": { "value": "#c0f3bf", "figma": { "name": "Colors/Green/200", "collection": "Colors" } },
+      "300": { "value": "#8ee88d", "figma": { "name": "Colors/Green/300", "collection": "Colors" } },
+      "400": { "value": "#54d454", "figma": { "name": "Colors/Green/400", "collection": "Colors" } },
+      "500": { "value": "#2dba2d", "figma": { "name": "Colors/Green/500", "collection": "Colors" } },
+      "600": { "value": "#209920", "figma": { "name": "Colors/Green/600", "collection": "Colors" } },
+      "700": { "value": "#1c791d", "figma": { "name": "Colors/Green/700", "collection": "Colors" } },
+      "800": { "value": "#1b601b", "figma": { "name": "Colors/Green/800", "collection": "Colors" } },
+      "900": { "value": "#184f1a", "figma": { "name": "Colors/Green/900", "collection": "Colors" } },
+      "950": { "value": "#082b09", "figma": { "name": "Colors/Green/950", "collection": "Colors" } }
+    },
+    "red": {
+      "50": { "value": "#fff0f0", "figma": { "name": "Colors/Red/50", "collection": "Colors" } },
+      "100": { "value": "#ffdfde", "figma": { "name": "Colors/Red/100", "collection": "Colors" } },
+      "200": { "value": "#ffc4c3", "figma": { "name": "Colors/Red/200", "collection": "Colors" } },
+      "300": { "value": "#ff9b99", "figma": { "name": "Colors/Red/300", "collection": "Colors" } },
+      "400": { "value": "#ff625f", "figma": { "name": "Colors/Red/400", "collection": "Colors" } },
+      "500": { "value": "#ff322d", "figma": { "name": "Colors/Red/500", "collection": "Colors" } },
+      "600": { "value": "#f5140f", "figma": { "name": "Colors/Red/600", "collection": "Colors" } },
+      "700": { "value": "#b91c2a", "figma": { "name": "Colors/Red/700", "collection": "Colors" } },
+      "800": { "value": "#991b26", "figma": { "name": "Colors/Red/800", "collection": "Colors" } },
+      "900": { "value": "#7f1d26", "figma": { "name": "Colors/Red/900", "collection": "Colors" } },
+      "950": { "value": "#450a0f", "figma": { "name": "Colors/Red/950", "collection": "Colors" } }
+    },
+    "orange": {
+      "50": { "value": "#fff8ec", "figma": { "name": "Colors/Orange/50", "collection": "Colors" } },
+      "100": { "value": "#fff0d3", "figma": { "name": "Colors/Orange/100", "collection": "Colors" } },
+      "200": { "value": "#ffdca5", "figma": { "name": "Colors/Orange/200", "collection": "Colors" } },
+      "300": { "value": "#ffc26d", "figma": { "name": "Colors/Orange/300", "collection": "Colors" } },
+      "400": { "value": "#ff9d32", "figma": { "name": "Colors/Orange/400", "collection": "Colors" } },
+      "500": { "value": "#ff7f0a", "figma": { "name": "Colors/Orange/500", "collection": "Colors" } },
+      "600": { "value": "#ff6600", "figma": { "name": "Colors/Orange/600", "collection": "Colors" } },
+      "700": { "value": "#cc4902", "figma": { "name": "Colors/Orange/700", "collection": "Colors" } },
+      "800": { "value": "#a1390b", "figma": { "name": "Colors/Orange/800", "collection": "Colors" } },
+      "900": { "value": "#82310c", "figma": { "name": "Colors/Orange/900", "collection": "Colors" } },
+      "950": { "value": "#461604", "figma": { "name": "Colors/Orange/950", "collection": "Colors" } }
+    },
+    "neutral": {
+      "white": { "value": "#fdfdfd", "figma": { "name": "Colors/Neutral/white", "collection": "Colors" } },
+      "50": { "value": "#f5f5f6", "figma": { "name": "Colors/Neutral/50", "collection": "Colors" } },
+      "100": { "value": "#e5e5e8", "figma": { "name": "Colors/Neutral/100", "collection": "Colors" } },
+      "200": { "value": "#cecfd3", "figma": { "name": "Colors/Neutral/200", "collection": "Colors" } },
+      "300": { "value": "#adb0b3", "figma": { "name": "Colors/Neutral/300", "collection": "Colors" } },
+      "400": { "value": "#898c92", "figma": { "name": "Colors/Neutral/400", "collection": "Colors" } },
+      "500": { "value": "#686b72", "figma": { "name": "Colors/Neutral/500", "collection": "Colors" } },
+      "600": { "value": "#595b61", "figma": { "name": "Colors/Neutral/600", "collection": "Colors" } },
+      "700": { "value": "#4c4e52", "figma": { "name": "Colors/Neutral/700", "collection": "Colors" } },
+      "800": { "value": "#434447", "figma": { "name": "Colors/Neutral/800", "collection": "Colors" } },
+      "900": { "value": "#3b3b3e", "figma": { "name": "Colors/Neutral/900", "collection": "Colors" } },
+      "950": { "value": "#252627", "figma": { "name": "Colors/Neutral/950", "collection": "Colors" } }
+    },
+    "foreground": {
+      "primary": { "value": "#252627", "figma": { "name": "Foreground/fg-primary", "collection": "Foreground" } },
+      "secondary": { "value": "#595b61", "figma": { "name": "Foreground/fg-secondary", "collection": "Foreground" } },
+      "brand": { "value": "#431bbc", "figma": { "name": "Foreground/fg-brand", "collection": "Foreground" } },
+      "primary-invert": { "value": "#fdfdfd", "figma": { "name": "Foreground/fg-primary-invert", "collection": "Foreground" } },
+      "text-input-placeholder": { "value": "#898c92", "figma": { "name": "Foreground/text-imput-placeholder", "collection": "Foreground" } },
+      "system-danger": { "value": "#991b26", "figma": { "name": "Foreground/System/fg-danger", "collection": "Foreground/System" } },
+      "system-success": { "value": "#1b601b", "figma": { "name": "Foreground/System/fg-success", "collection": "Foreground/System" } },
+      "system-info": { "value": "#2248ab", "figma": { "name": "Foreground/System/fg-info", "collection": "Foreground/System" } },
+      "system-warning": { "value": "#a1390b", "figma": { "name": "Foreground/System/fg-warning", "collection": "Foreground/System" } }
+    },
+    "background": {
+      "page": { "value": "#f5f5f6", "figma": { "name": "Background/bg-page", "collection": "Background" } },
+      "layer100": { "value": "#fdfdfd", "figma": { "name": "Background/bg-layer100", "collection": "Background" } },
+      "layer200": { "value": "#f5f5f6", "figma": { "name": "Background/bg-layer200", "collection": "Background" } },
+      "system": {
+        "success": { "value": "#d4f8d3", "figma": { "name": "Background/System/bg-success", "collection": "Background/System" } },
+        "info": { "value": "#dcebfd", "figma": { "name": "Background/System/bg-info", "collection": "Background/System" } },
+        "warning": { "value": "#fff0d3", "figma": { "name": "Background/System/bg-warning", "collection": "Background/System" } },
+        "danger": { "value": "#ffdfde", "figma": { "name": "Background/System/bg-danger", "collection": "Background/System" } }
+      },
+      "components": {
+        "tooltip": {
+          "default": {
+            "value": "#182953",
+            "figma": { "name": "Background/Components/tooltip/bg-tooltip-default", "collection": "Background/Components/tooltip" }
+          }
+        }
+      },
+      "brand": {
+        "filled": {
+          "default": { "value": "#6338f5", "figma": { "name": "Background/Brand/bg-brand-filled-default", "collection": "Background/Brand" } },
+          "hover": { "value": "#9486ff", "figma": { "name": "Background/Brand/bg-brand-filled-hover", "collection": "Background/Brand" } },
+          "active": { "value": "#39189a", "figma": { "name": "Background/Brand/bg-brand-filled-active", "collection": "Background/Brand" } }
+        },
+        "transparent": {
+          "default": { "value": "#6338f500", "figma": { "name": "Background/Brand/bg-brand-transparancy-default", "collection": "Background/Brand" } },
+          "hover": { "value": "#6338f51a", "figma": { "name": "Background/Brand/bg-brand-transparancy-hover", "collection": "Background/Brand" } },
+          "active": { "value": "#6338f566", "figma": { "name": "Background/Brand/bg-brand-transparancy-active", "collection": "Background/Brand" } }
+        },
+        "gradient": {
+          "100": { "value": "#9486ff", "figma": { "name": "Background/Brand/Gradient/100", "collection": "Background/Brand" } },
+          "200": { "value": "#6338f5", "figma": { "name": "Background/Brand/Gradient/200", "collection": "Background/Brand" } },
+          "300": { "value": "#431bbc", "figma": { "name": "Background/Brand/Gradient/300", "collection": "Background/Brand" } }
+        }
+      }
+    },
+    "stroke": {
+      "default": { "value": "#0000004d", "figma": { "name": "Stroke/stroke-default", "collection": "Stroke" } },
+      "strong": { "value": "#00000080", "figma": { "name": "Stroke/stroke-strong", "collection": "Stroke" } },
+      "light": { "value": "#00000033", "figma": { "name": "Stroke/stroke-light", "collection": "Stroke" } },
+      "brand": { "value": "#6338f5", "figma": { "name": "Stroke/stroke-brand", "collection": "Stroke" } },
+      "system-danger": { "value": "#f5140f", "figma": { "name": "Stroke/System/stroke-danger", "collection": "Stroke/System" } },
+      "system-success": { "value": "#209920", "figma": { "name": "Stroke/System/stroke-success", "collection": "Stroke/System" } },
+      "system-info": { "value": "#2a6de6", "figma": { "name": "Stroke/System/stroke-info", "collection": "Stroke/System" } },
+      "system-warning": { "value": "#ff6600", "figma": { "name": "Stroke/System/stroke-warning", "collection": "Stroke/System" } }
+    },
+    "brand": {
+      "20": { "value": "#6338f533", "figma": { "name": "Transparancy/Brand/20", "collection": "Transparancy/Brand" } }
+    }
+  },
+  "space": {
+    "0": { "value": "0px", "figma": { "name": "Spacing/0", "collection": "Spacing" } },
+    "0.5": { "value": "2px", "figma": { "name": "Spacing/0,5", "collection": "Spacing" } },
+    "1": { "value": "4px", "figma": { "name": "Spacing/1", "collection": "Spacing" } },
+    "2": { "value": "8px", "figma": { "name": "Spacing/2", "collection": "Spacing" } },
+    "3": { "value": "12px", "figma": { "name": "Spacing/3", "collection": "Spacing" } },
+    "4": { "value": "16px", "figma": { "name": "Spacing/4", "collection": "Spacing" } },
+    "5": { "value": "20px", "figma": { "name": "Spacing/5", "collection": "Spacing" } },
+    "6": { "value": "24px", "figma": { "name": "Spacing/6", "collection": "Spacing" } }
+  },
+  "text": {
+    "6xl": { "value": "60px", "figma": { "name": "Text/text-6xl", "collection": "Text" } },
+    "5xl": { "value": "48px", "figma": { "name": "Text/text-5xl", "collection": "Text" } },
+    "4xl": { "value": "36px", "figma": { "name": "Text/text-4xl", "collection": "Text" } },
+    "3xl": { "value": "30px", "figma": { "name": "Text/text-3xl", "collection": "Text" } },
+    "2xl": { "value": "24px", "figma": { "name": "Text/text-2xl", "collection": "Text" } },
+    "xl": { "value": "20px", "figma": { "name": "Text/text-xl", "collection": "Text" } },
+    "base": { "value": "16px", "figma": { "name": "Text/text-base", "collection": "Text" } },
+    "sm": { "value": "14px", "figma": { "name": "Text/text-sm", "collection": "Text" } },
+    "xs": { "value": "12px", "figma": { "name": "Text/text-xs", "collection": "Text" } }
+  },
+  "radius": {
+    "none": { "value": "0px", "figma": { "name": "Radius/rounded-none", "collection": "Radius" } },
+    "sm": { "value": "2px", "figma": { "name": "Radius/rounded-sm", "collection": "Radius" } },
+    "default": { "value": "4px", "figma": { "name": "Radius/rounded", "collection": "Radius" } },
+    "md": { "value": "6px", "figma": { "name": "Radius/rounded-md", "collection": "Radius" } },
+    "lg": { "value": "8px", "figma": { "name": "Radius/rounded-lg", "collection": "Radius" } },
+    "xl": { "value": "12px", "figma": { "name": "Radius/rounded-xl", "collection": "Radius" } },
+    "2xl": { "value": "16px", "figma": { "name": "Radius/rounded-2xl", "collection": "Radius" } },
+    "3xl": { "value": "24px", "figma": { "name": "Radius/rounded-3xl", "collection": "Radius" } },
+    "full": { "value": "999px", "figma": { "name": "Radius/rounded-full", "collection": "Radius" } }
+  },
+  "border": {
+    "base": { "value": "1px", "figma": { "name": "Border/border-base", "collection": "Border" } },
+    "md": { "value": "2px", "figma": { "name": "Border/border-md", "collection": "Border" } },
+    "lg": { "value": "3px", "figma": { "name": "Border/border-lg", "collection": "Border" } },
+    "xl": { "value": "4px", "figma": { "name": "Border/border-xl", "collection": "Border" } }
+  },
+  "breakpoint": {
+    "xs": { "value": "370px", "figma": { "name": "Breakpoint/xs", "collection": "Breakpoint" } },
+    "sm": { "value": "640px", "figma": { "name": "Breakpoint/sm", "collection": "Breakpoint" } },
+    "md": { "value": "768px", "figma": { "name": "Breakpoint/md", "collection": "Breakpoint" } },
+    "lg": { "value": "1024px", "figma": { "name": "Breakpoint/lg", "collection": "Breakpoint" } },
+    "xl": { "value": "1280px", "figma": { "name": "Breakpoint/xl", "collection": "Breakpoint" } },
+    "2xl": { "value": "1536px", "figma": { "name": "Breakpoint/2xl", "collection": "Breakpoint" } }
+  },
+  "opacity": {
+    "disabled": { "value": "0.4", "figma": { "name": "Opacity/opacity-disabled", "collection": "Opacity" } }
+  },
+  "shadow": {
+    "brand": {
+      "md": {
+        "value": "0px 2px 4px -1px #6338f533, 0px 4px 6px -1px #6338f533",
+        "figma": { "name": "Brand/shadow-md", "collection": "Brand" }
+      },
+      "lg": {
+        "value": "0px 4px 6px -2px #6338f533, 0px 10px 15px -3px #6338f533",
+        "figma": { "name": "Brand/shadow-lg", "collection": "Brand" }
+      }
+    },
+    "neutral": {
+      "sm": {
+        "value": "0px 1px 3px 0px rgba(0,0,0,0.1), 0px 1px 2px 0px rgba(0,0,0,0.06)",
+        "figma": { "name": "Neutral/shadow", "collection": "Neutral" }
+      },
+      "md": {
+        "value": "0px 2px 4px -1px #0000000F, 0px 4px 6px -1px #0000001A",
+        "figma": { "name": "Neutral/shadow-md", "collection": "Neutral" }
+      },
+      "lg": {
+        "value": "0px 4px 6px -2px #0000000D, 0px 10px 15px -3px #0000001A",
+        "figma": { "name": "Neutral/shadow-lg", "collection": "Neutral" }
+      }
+    }
+  }
+}

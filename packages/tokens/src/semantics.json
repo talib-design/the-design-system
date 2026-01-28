@@ -1,0 +1,129 @@
+{
+  "text": {
+    "primary": { "value": "{color.foreground.primary}", "figma": { "aliasOf": "Foreground/fg-primary" } },
+    "secondary": { "value": "{color.foreground.secondary}", "figma": { "aliasOf": "Foreground/fg-secondary" } },
+    "placeholder": { "value": "{color.foreground.text-input-placeholder}", "figma": { "aliasOf": "Foreground/text-imput-placeholder" } },
+    "brand": { "value": "{color.foreground.brand}", "figma": { "aliasOf": "Foreground/fg-brand" } },
+    "invert": { "value": "{color.foreground.primary-invert}", "figma": { "aliasOf": "Foreground/fg-primary-invert" } },
+    "danger": { "value": "{color.foreground.system-danger}", "figma": { "aliasOf": "Foreground/System/fg-danger" } },
+    "system": {
+      "success": { "value": "{color.foreground.system-success}", "figma": { "aliasOf": "Foreground/System/fg-success" } },
+      "info": { "value": "{color.foreground.system-info}", "figma": { "aliasOf": "Foreground/System/fg-info" } },
+      "warning": { "value": "{color.foreground.system-warning}", "figma": { "aliasOf": "Foreground/System/fg-warning" } },
+      "danger": { "value": "{color.foreground.system-danger}", "figma": { "aliasOf": "Foreground/System/fg-danger" } }
+    },
+    "success": { "value": "{color.green.700}", "figma": { "aliasOf": "Colors/Green/700" } },
+    "warning": { "value": "{color.yellow.700}", "figma": { "aliasOf": "Colors/Yellow/700" } },
+    "error": { "value": "{color.red.700}", "figma": { "aliasOf": "Colors/Red/700" } }
+  },
+  "bg": {
+    "page": { "value": "{color.background.page}", "figma": { "aliasOf": "Background/bg-page" } },
+    "layer100": { "value": "{color.background.layer100}", "figma": { "aliasOf": "Background/bg-layer100" } },
+    "layer200": { "value": "{color.background.layer200}", "figma": { "aliasOf": "Background/bg-layer200" } },
+    "system": {
+      "success": { "value": "{color.background.system.success}", "figma": { "aliasOf": "Background/System/bg-success" } },
+      "info": { "value": "{color.background.system.info}", "figma": { "aliasOf": "Background/System/bg-info" } },
+      "warning": { "value": "{color.background.system.warning}", "figma": { "aliasOf": "Background/System/bg-warning" } },
+      "danger": { "value": "{color.background.system.danger}", "figma": { "aliasOf": "Background/System/bg-danger" } }
+    },
+    "tooltip": {
+      "default": { "value": "{color.background.components.tooltip.default}", "figma": { "aliasOf": "Background/Components/tooltip/bg-tooltip-default" } }
+    },
+    "success": {
+      "surface": { "value": "{color.green.100}", "figma": { "aliasOf": "Colors/Green/100" } },
+      "solid": { "value": "{color.green.600}", "figma": { "aliasOf": "Colors/Green/600" } },
+      "hover": { "value": "{color.green.700}", "figma": { "aliasOf": "Colors/Green/700" } },
+      "active": { "value": "{color.green.800}", "figma": { "aliasOf": "Colors/Green/800" } }
+    },
+    "warning": {
+      "surface": { "value": "{color.yellow.100}", "figma": { "aliasOf": "Colors/Yellow/100" } },
+      "solid": { "value": "{color.yellow.600}", "figma": { "aliasOf": "Colors/Yellow/600" } },
+      "hover": { "value": "{color.yellow.700}", "figma": { "aliasOf": "Colors/Yellow/700" } },
+      "active": { "value": "{color.yellow.800}", "figma": { "aliasOf": "Colors/Yellow/800" } }
+    },
+    "error": {
+      "surface": { "value": "{color.red.100}", "figma": { "aliasOf": "Colors/Red/100" } },
+      "solid": { "value": "{color.red.600}", "figma": { "aliasOf": "Colors/Red/600" } },
+      "hover": { "value": "{color.red.700}", "figma": { "aliasOf": "Colors/Red/700" } },
+      "active": { "value": "{color.red.800}", "figma": { "aliasOf": "Colors/Red/800" } }
+    },
+    "brand": {
+      "filled": {
+        "default": { "value": "{color.background.brand.filled.default}", "figma": { "aliasOf": "Background/Brand/bg-brand-filled-default" } },
+        "hover": { "value": "{color.background.brand.filled.hover}", "figma": { "aliasOf": "Background/Brand/bg-brand-filled-hover" } },
+        "active": { "value": "{color.background.brand.filled.active}", "figma": { "aliasOf": "Background/Brand/bg-brand-filled-active" } }
+      },
+      "transparent": {
+        "default": { "value": "{color.background.brand.transparent.default}", "figma": { "aliasOf": "Background/Brand/bg-brand-transparancy-default" } },
+        "hover": { "value": "{color.background.brand.transparent.hover}", "figma": { "aliasOf": "Background/Brand/bg-brand-transparancy-hover" } },
+        "active": { "value": "{color.background.brand.transparent.active}", "figma": { "aliasOf": "Background/Brand/bg-brand-transparancy-active" } }
+      }
+    }
+  },
+  "border": {
+    "default": { "value": "{color.stroke.default}", "figma": { "aliasOf": "Stroke/stroke-default" } },
+    "strong": { "value": "{color.stroke.strong}", "figma": { "aliasOf": "Stroke/stroke-strong" } },
+    "light": { "value": "{color.stroke.light}", "figma": { "aliasOf": "Stroke/stroke-light" } },
+    "brand": { "value": "{color.stroke.brand}", "figma": { "aliasOf": "Stroke/stroke-brand" } },
+    "danger": { "value": "{color.stroke.system-danger}", "figma": { "aliasOf": "Stroke/System/stroke-danger" } },
+    "system": {
+      "success": { "value": "{color.stroke.system-success}", "figma": { "aliasOf": "Stroke/System/stroke-success" } },
+      "info": { "value": "{color.stroke.system-info}", "figma": { "aliasOf": "Stroke/System/stroke-info" } },
+      "warning": { "value": "{color.stroke.system-warning}", "figma": { "aliasOf": "Stroke/System/stroke-warning" } },
+      "danger": { "value": "{color.stroke.system-danger}", "figma": { "aliasOf": "Stroke/System/stroke-danger" } }
+    },
+    "success": { "value": "{color.green.200}", "figma": { "aliasOf": "Colors/Green/200" } },
+    "warning": { "value": "{color.yellow.200}", "figma": { "aliasOf": "Colors/Yellow/200" } },
+    "error": { "value": "{color.red.200}", "figma": { "aliasOf": "Colors/Red/200" } }
+  },
+  "icon": {
+    "default": { "value": "{color.foreground.primary}", "figma": { "aliasOf": "Foreground/fg-primary" } },
+    "brand": { "value": "{color.foreground.brand}", "figma": { "aliasOf": "Foreground/fg-brand" } },
+    "danger": { "value": "{color.foreground.system-danger}", "figma": { "aliasOf": "Foreground/System/fg-danger" } },
+    "success": { "value": "{color.green.700}", "figma": { "aliasOf": "Colors/Green/700" } },
+    "warning": { "value": "{color.yellow.700}", "figma": { "aliasOf": "Colors/Yellow/700" } },
+    "error": { "value": "{color.red.700}", "figma": { "aliasOf": "Colors/Red/700" } }
+  },
+  "opacity": {
+    "disabled": { "value": "{opacity.disabled}", "figma": { "aliasOf": "Opacity/opacity-disabled" } }
+  },
+  "shadow": {
+    "brand": {
+      "md": { "value": "{shadow.brand.md}", "figma": { "aliasOf": "Brand/shadow-md" } },
+      "lg": { "value": "{shadow.brand.lg}", "figma": { "aliasOf": "Brand/shadow-lg" } }
+    },
+    "neutral": {
+      "sm": { "value": "{shadow.neutral.sm}", "figma": { "aliasOf": "Neutral/shadow" } },
+      "md": { "value": "{shadow.neutral.md}", "figma": { "aliasOf": "Neutral/shadow-md" } },
+      "lg": { "value": "{shadow.neutral.lg}", "figma": { "aliasOf": "Neutral/shadow-lg" } }
+    }
+  },
+  "focus": {
+    "ring": {
+      "color": { "value": "{color.stroke.brand}", "figma": { "aliasOf": "Stroke/stroke-brand" } },
+      "width": { "value": "{border.md}", "figma": { "aliasOf": "Border/border-md" } }
+    }
+  },
+  "typography": {
+    "heading": {
+      "6xl": { "fontFamily": "DM Sans", "fontWeight": 600, "fontSize": "{text.6xl}", "lineHeight": "{text.6xl}", "figma": { "style": "Heading/text-6xl-bold" } },
+      "5xl": { "fontFamily": "DM Sans", "fontWeight": 600, "fontSize": "{text.5xl}", "lineHeight": "{text.5xl}", "figma": { "style": "Heading/text-5xl-bold" } },
+      "4xl": { "fontFamily": "DM Sans", "fontWeight": 600, "fontSize": "{text.4xl}", "lineHeight": "{text.4xl}", "figma": { "style": "Heading/text-4xl-bold" } },
+      "3xl": { "fontFamily": "DM Sans", "fontWeight": 600, "fontSize": "{text.3xl}", "lineHeight": "{text.4xl}", "figma": { "style": "Heading/text-3xl-bold" } },
+      "2xl": { "fontFamily": "DM Sans", "fontWeight": 600, "fontSize": "{text.2xl}", "lineHeight": "{text.4xl}", "figma": { "style": "Heading/text-2xl-bold" } },
+      "xl": { "fontFamily": "DM Sans", "fontWeight": 600, "fontSize": "{text.xl}", "lineHeight": "{text.2xl}", "figma": { "style": "Heading/text-xl-bold" } }
+    },
+    "paragraph": {
+      "quote": { "fontFamily": "DM Sans", "fontStyle": "italic", "fontWeight": 500, "fontSize": "{text.xl}", "lineHeight": "{text.3xl}", "figma": { "style": "Paragraph/text-quote" } },
+      "base-bold": { "fontFamily": "DM Sans", "fontWeight": 700, "fontSize": "{text.base}", "lineHeight": "{text.2xl}", "figma": { "style": "Paragraph/text-base-bold" } },
+      "base-regular": { "fontFamily": "DM Sans", "fontWeight": 400, "fontSize": "{text.base}", "lineHeight": "{text.2xl}", "figma": { "style": "Paragraph/texte-base-regular" } },
+      "base-italic": { "fontFamily": "DM Sans", "fontStyle": "italic", "fontWeight": 400, "fontSize": "{text.base}", "lineHeight": "{text.2xl}", "figma": { "style": "Paragraph/text-base-italic" } },
+      "number-bold": { "fontFamily": "Inter", "fontWeight": 600, "fontSize": "{text.base}", "lineHeight": "{text.2xl}", "figma": { "style": "Paragraph/text-number-bold" } },
+      "number-regular": { "fontFamily": "Inter", "fontWeight": 400, "fontSize": "{text.base}", "lineHeight": "{text.2xl}", "figma": { "style": "Paragraph/text-number-regular" } },
+      "sm-bold": { "fontFamily": "DM Sans", "fontWeight": 600, "fontSize": "{text.sm}", "lineHeight": "{text.xl}", "figma": { "style": "Paragraph/text-sm-bold" } },
+      "sm-regular": { "fontFamily": "DM Sans", "fontWeight": 400, "fontSize": "{text.sm}", "lineHeight": "{text.xl}", "figma": { "style": "Paragraph/text-sm-regular" } },
+      "xs-bold": { "fontFamily": "DM Sans", "fontWeight": 600, "fontSize": "{text.xs}", "lineHeight": "{text.base}", "figma": { "style": "Paragraph/text-xs-bold" } },
+      "xs-regular": { "fontFamily": "DM Sans", "fontWeight": 500, "fontSize": "{text.xs}", "lineHeight": "{text.base}", "figma": { "style": "Paragraph/text-xs-regular" } }
+    }
+  }
+}
