@@ -51,6 +51,6 @@ L’objectif de ce projet est multiple :
     - Lier le code aux composants dans le Mode Dev avec Figma Code
     - Voir si la MAJ d'un composant dans Figma se fait facilement dans Git
 
-##Merci d'avances pour vos feedbacks !!!
+**Merci d'avances pour vos feedbacks !!!**
 
 
