@@ -39,8 +39,8 @@ const sizeClasses: Record<ButtonSize, string> = {
 const variantClasses: Record<ButtonVariant, string> = {
   filled: cx(
     "bg-[var(--ds-button-color-default-bg)] text-[color:var(--ds-button-color-default-text)]",
-    "enabled:hover:bg-[var(--ds-button-color-hover-bg)] enabled:hover:shadow-[var(--ds-button-color-hover-shadow)]",
-    "enabled:active:bg-[var(--ds-button-color-pressed-bg)]",
+    "enabled:hover:[background:var(--c-button-filled-hover-background)] enabled:hover:shadow-[var(--ds-button-color-hover-shadow)]",
+    "enabled:active:[background:var(--ds-button-color-pressed-bg)]",
     "disabled:opacity-[var(--ds-button-color-disabled-opacity)] disabled:shadow-none"
   ),
   outlined: cx(
@@ -80,7 +80,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className={cx(
           "inline-flex items-center justify-center font-semibold",
           "focus-visible:outline focus-visible:outline-[var(--ds-focus-ring-width)] focus-visible:outline-[var(--ds-focus-ring-color)] focus-visible:outline-offset-2",
-          "transition-shadow",
+          "transition-shadow [transition:background_800ms_ease] enabled:active:[transition:background_0ms_ease]",
           sizeClasses[size],
           variantClasses[variant],
           loading && "cursor-wait",

@@ -22,6 +22,10 @@
         },
         "hover": {
           "bg": { "value": "{bg.brand.filled.hover}", "figma": { "nodes": ["12514:247"] } },
+          "background": {
+            "value": "radial-gradient(ellipse 140% 120% at 50% 30%, {bg.brand.100} 0%, {bg.brand.200} 65%, {bg.brand.300} 100%)",
+            "figma": { "aliasOf": "Background/Brand/Gradient/100-300" }
+          },
           "text": { "value": "{text.invert}", "figma": { "nodes": ["12514:247"] } },
           "shadow": { "value": "{shadow.brand.lg}", "figma": { "nodes": ["12514:247"] } }
         },

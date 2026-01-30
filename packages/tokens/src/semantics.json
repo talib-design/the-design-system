@@ -57,7 +57,15 @@
         "default": { "value": "{color.background.brand.transparent.default}", "figma": { "aliasOf": "Background/Brand/bg-brand-transparancy-default" } },
         "hover": { "value": "{color.background.brand.transparent.hover}", "figma": { "aliasOf": "Background/Brand/bg-brand-transparancy-hover" } },
         "active": { "value": "{color.background.brand.transparent.active}", "figma": { "aliasOf": "Background/Brand/bg-brand-transparancy-active" } }
-      }
+      },
+      "gradient": {
+        "100": { "value": "{color.background.brand.gradient.100}", "figma": { "aliasOf": "Background/Brand/Gradient/100" } },
+        "200": { "value": "{color.background.brand.gradient.200}", "figma": { "aliasOf": "Background/Brand/Gradient/200" } },
+        "300": { "value": "{color.background.brand.gradient.300}", "figma": { "aliasOf": "Background/Brand/Gradient/300" } }
+      },
+      "100": { "value": "{color.background.brand.gradient.100}", "figma": { "aliasOf": "Background/Brand/Gradient/100" } },
+      "200": { "value": "{color.background.brand.gradient.200}", "figma": { "aliasOf": "Background/Brand/Gradient/200" } },
+      "300": { "value": "{color.background.brand.gradient.300}", "figma": { "aliasOf": "Background/Brand/Gradient/300" } }
     }
   },
   "border": {

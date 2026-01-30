@@ -209,6 +209,12 @@
   --ds-bg-brand-transparent-default: var(--ds-color-background-brand-transparent-default);
   --ds-bg-brand-transparent-hover: var(--ds-color-background-brand-transparent-hover);
   --ds-bg-brand-transparent-active: var(--ds-color-background-brand-transparent-active);
+  --ds-bg-brand-gradient-100: var(--ds-color-background-brand-gradient-100);
+  --ds-bg-brand-gradient-200: var(--ds-color-background-brand-gradient-200);
+  --ds-bg-brand-gradient-300: var(--ds-color-background-brand-gradient-300);
+  --s-background-brand-100: var(--ds-bg-brand-gradient-100);
+  --s-background-brand-200: var(--ds-bg-brand-gradient-200);
+  --s-background-brand-300: var(--ds-bg-brand-gradient-300);
   --ds-border-default: var(--ds-color-stroke-default);
   --ds-border-strong: var(--ds-color-stroke-strong);
   --ds-border-light: var(--ds-color-stroke-light);
@@ -322,6 +328,13 @@
   --ds-button-color-default-bg: var(--ds-bg-brand-filled-default);
   --ds-button-color-default-text: var(--ds-text-invert);
   --ds-button-color-hover-bg: var(--ds-bg-brand-filled-hover);
+  --c-button-filled-hover-background: radial-gradient(
+    ellipse 140% 120% at 50% 30%,
+    var(--s-background-brand-100) 0%,
+    var(--s-background-brand-200) 65%,
+    var(--s-background-brand-300) 100%
+  );
+  --ds-button-color-hover-bg-gradient: var(--c-button-filled-hover-background);
   --ds-button-color-hover-text: var(--ds-text-invert);
   --ds-button-color-hover-shadow: var(--ds-shadow-brand-lg);
   --ds-button-color-pressed-bg: var(--ds-bg-brand-filled-active);

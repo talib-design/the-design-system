@@ -40,6 +40,7 @@ const meta: Meta<typeof Button> = {
           "- `filled`, `outlined`, `text`",
           "- sizes: `default`, `small`",
           "- states: `loading`, `disabled`, `hover`, `active` (via CSS)",
+          "- filled hover uses gradient background",
           "- `disabled` ignores hover/active styles",
           "",
           "**Accessibility**:",
@@ -69,6 +70,15 @@ export const States: Story = {
         <Button variant="filled">Filled</Button>
         <Button variant="outlined">Outlined</Button>
         <Button variant="text">Text</Button>
+      </div>
+      <div className="flex flex-wrap gap-[var(--ds-space-3)]">
+        <Button
+          variant="filled"
+          className="[background:var(--c-button-filled-hover-background)] shadow-[var(--ds-button-color-hover-shadow)]"
+          iconLeft={<span aria-hidden="true">🏠</span>}
+        >
+          Hover (gradient)
+        </Button>
       </div>
       <div className="flex flex-wrap gap-[var(--ds-space-3)]">
         <Button size="default">Default</Button>
