@@ -16,6 +16,37 @@ Storybook démarre sur `http://localhost:6006`.
 2. Utilise `tags: ["autodocs"]` et définis des `argTypes` propres.
 3. Ajoute au minimum une story `Playground` et une story `States`.
 
+## Conventions props & accessibilité
+
+### IDs et ARIA
+
+- Ne jamais laisser `...props` écraser un `id` généré en interne.
+- Pattern recommandé :
+  - `const id = props.id ?? internalId;`
+  - puis `...props` AVANT `id={id}` (ou retirer `id` de `props`).
+- Les couples ARIA doivent être cohérents :
+  - `aria-controls` ↔ `id`
+  - `aria-labelledby` ↔ `id`
+  - `aria-describedby` ↔ `id`
+
+### Contrôlé vs non‑contrôlé
+
+- Les composants de formulaire doivent respecter le comportement natif.
+- `RadioGroup` : une seule valeur sélectionnée, pas de toggle off.
+- `Checkbox` / `Switch` : `checked` / `defaultChecked` supportés, label cliquable.
+
+### Accessibilité minimale
+
+- Utiliser des éléments natifs (`button`, `input`, `select`) quand possible.
+- Focus visible systématique.
+- `aria-invalid` + `aria-describedby` si error/helper text.
+- `Modal`: `aria-labelledby` requis (title).
+
+### Pattern recommandé pour les props
+
+- Props critiques (id/role/aria/type) doivent être explicitement gérées.
+- Utiliser `Omit<...>` pour éviter collisions si un prop est contrôlé par le composant.
+
 ## Documenter un nouveau composant
 
 Inclure dans les docs du composant :

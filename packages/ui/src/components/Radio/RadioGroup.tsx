@@ -16,6 +16,8 @@ export type RadioGroupProps = {
   defaultValue?: string;
   onValueChange?: (value: string) => void;
   disabled?: boolean;
+  ariaLabel?: string;
+  ariaLabelledby?: string;
   className?: string;
   children: React.ReactNode;
 };
@@ -26,6 +28,8 @@ export function RadioGroup({
   defaultValue,
   onValueChange,
   disabled,
+  ariaLabel,
+  ariaLabelledby,
   className,
   children
 }: RadioGroupProps) {
@@ -43,7 +47,12 @@ export function RadioGroup({
     <RadioGroupContext.Provider
       value={{ name, value: currentValue, onValueChange: handleValueChange, disabled }}
     >
-      <div role="radiogroup" className={cx("grid gap-[var(--ds-space-2)]", className)}>
+      <div
+        role="radiogroup"
+        aria-label={ariaLabel}
+        aria-labelledby={ariaLabelledby}
+        className={cx("grid gap-[var(--ds-space-2)]", className)}
+      >
         {children}
       </div>
     </RadioGroupContext.Provider>

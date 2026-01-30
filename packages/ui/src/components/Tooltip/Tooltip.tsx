@@ -54,6 +54,7 @@ export function TooltipTrigger({
 
 export function TooltipContent({
   className,
+  id: _id,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
   const ctx = React.useContext(TooltipContext);

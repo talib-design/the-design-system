@@ -4,6 +4,7 @@ import { cx } from "../shared/cx";
 type AccordionContextValue = {
   openItems: Set<string>;
   toggleItem: (value: string) => void;
+  baseId: string;
 };
 
 const AccordionContext = React.createContext<AccordionContextValue | null>(null);
@@ -25,6 +26,7 @@ export function Accordion({
   className,
   children
 }: AccordionProps) {
+  const baseId = React.useId();
   const [internal, setInternal] = React.useState<Set<string>>(
     () => new Set(defaultValue ?? [])
   );
@@ -47,7 +49,7 @@ export function Accordion({
   };
 
   return (
-    <AccordionContext.Provider value={{ openItems, toggleItem }}>
+    <AccordionContext.Provider value={{ openItems, toggleItem, baseId }}>
       <div className={cx("flex flex-col", className)}>{children}</div>
     </AccordionContext.Provider>
   );
@@ -77,6 +79,7 @@ export function AccordionTrigger({
   icon,
   className,
   children,
+  id: _id,
   ...props
 }: AccordionTriggerProps) {
   const ctx = React.useContext(AccordionContext);
@@ -84,8 +87,9 @@ export function AccordionTrigger({
     throw new Error("AccordionTrigger must be used within Accordion");
   }
   const isOpen = ctx.openItems.has(value);
-  const contentId = `${value}-content`;
-  const triggerId = `${value}-trigger`;
+  const baseId = `${ctx.baseId}-${value}`;
+  const contentId = `${baseId}-content`;
+  const triggerId = `${baseId}-trigger`;
 
   return (
     <button
@@ -125,6 +129,7 @@ export function AccordionContent({
   value,
   className,
   children,
+  id: _id,
   ...props
 }: AccordionContentProps) {
   const ctx = React.useContext(AccordionContext);
@@ -132,8 +137,9 @@ export function AccordionContent({
     throw new Error("AccordionContent must be used within Accordion");
   }
   const isOpen = ctx.openItems.has(value);
-  const contentId = `${value}-content`;
-  const triggerId = `${value}-trigger`;
+  const baseId = `${ctx.baseId}-${value}`;
+  const contentId = `${baseId}-content`;
+  const triggerId = `${baseId}-trigger`;
 
   if (!isOpen) {
     return null;
