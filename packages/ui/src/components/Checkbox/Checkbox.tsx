@@ -6,6 +6,10 @@ export type CheckboxProps = Omit<
   "type"
 > & {
   label?: string;
+  description?: string;
+  /** Place the checkbox control on the right. */
+  checkboxPosition?: "left" | "right";
+  fullWidth?: boolean;
   indeterminate?: boolean;
   error?: boolean;
   icon?: React.ReactNode;
@@ -14,7 +18,20 @@ export type CheckboxProps = Omit<
 
 export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   (
-    { id, label, indeterminate, disabled, error, icon, indeterminateIcon, className, ...props },
+    {
+      id,
+      label,
+      description,
+      checkboxPosition = "left",
+      fullWidth,
+      indeterminate,
+      disabled,
+      error,
+      icon,
+      indeterminateIcon,
+      className,
+      ...props
+    },
     ref
   ) => {
     const internalRef = React.useRef<HTMLInputElement | null>(null);
@@ -26,12 +43,80 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
       }
     }, [indeterminate]);
 
+    const control = (
+      <span
+        className={cx(
+          "relative inline-flex size-[20px] items-center justify-center rounded-[var(--ds-radius-default)] border border-solid",
+          "group-hover:border-[var(--ds-border-brand)] group-hover:bg-[var(--ds-bg-brand-transparent-hover)]",
+          "peer-focus-visible:outline peer-focus-visible:outline-[var(--ds-focus-ring-width)] peer-focus-visible:outline-[var(--ds-focus-ring-color)] peer-focus-visible:outline-offset-2",
+          "peer-checked:border-[var(--ds-border-brand)] peer-checked:bg-[var(--ds-bg-brand-filled-default)]",
+          "peer-disabled:opacity-[var(--ds-opacity-disabled)] peer-disabled:cursor-not-allowed",
+          "peer-disabled:border-[var(--ds-border-strong)] peer-disabled:bg-transparent",
+          checkboxPosition === "right" && "order-2",
+          error
+            ? "border-[var(--ds-border-system-danger)]"
+            : "border-[var(--ds-border-strong)]",
+          className
+        )}
+      >
+        <span
+          className={cx(
+            "absolute inset-[2px] rounded-[var(--ds-radius-default)]",
+            "bg-[var(--ds-bg-brand-filled-default)]",
+            "opacity-0",
+            "peer-checked:opacity-100",
+            "group-data-[indeterminate=true]:opacity-100",
+            error && "bg-[var(--ds-bg-system-danger)]"
+          )}
+        />
+        <span
+          aria-hidden="true"
+          className={cx(
+            "relative z-[1] text-[var(--ds-text-invert)]",
+            "text-[var(--ds-text-sm)] leading-[var(--ds-text-sm)]",
+            "opacity-0",
+            "peer-checked:opacity-100",
+            "group-data-[indeterminate=true]:opacity-0"
+          )}
+        >
+          {icon ?? "✓"}
+        </span>
+        <span
+          aria-hidden="true"
+          className={cx(
+            "relative z-[1] text-[var(--ds-text-invert)]",
+            "text-[var(--ds-text-sm)] leading-[var(--ds-text-sm)]",
+            "opacity-0",
+            "group-data-[indeterminate=true]:opacity-100",
+            "peer-checked:opacity-0"
+          )}
+        >
+          {indeterminateIcon ?? "—"}
+        </span>
+      </span>
+    );
+
+    const labelBlock = label ? (
+      <span className="flex flex-col gap-[var(--ds-space-0_5)]">
+        <span className="text-[var(--ds-text-base)] leading-[var(--ds-text-2xl)] text-[var(--ds-text-primary)]">
+          {label}
+        </span>
+        {description && (
+          <span className="text-[var(--ds-text-sm)] leading-[var(--ds-text-xl)] text-[var(--ds-text-secondary)]">
+            {description}
+          </span>
+        )}
+      </span>
+    ) : null;
+
     return (
       <label
         htmlFor={inputId}
         data-indeterminate={indeterminate ? "true" : "false"}
         className={cx(
-          "group inline-flex items-center gap-[var(--ds-space-2)]",
+          "group inline-flex items-start gap-[var(--ds-space-2)]",
+          checkboxPosition === "right" && "justify-between",
+          fullWidth && "w-full",
           disabled ? "cursor-not-allowed" : "cursor-pointer"
         )}
       >
@@ -48,58 +133,10 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
           className="peer sr-only"
           {...props}
         />
-        <span
-          className={cx(
-            "relative inline-flex size-[20px] items-center justify-center rounded-[var(--ds-radius-default)] border border-solid",
-            "group-hover:border-[var(--ds-border-brand)] group-hover:bg-[var(--ds-bg-brand-transparent-hover)]",
-            "peer-focus-visible:outline peer-focus-visible:outline-[var(--ds-focus-ring-width)] peer-focus-visible:outline-[var(--ds-focus-ring-color)] peer-focus-visible:outline-offset-2",
-            "peer-checked:border-[var(--ds-border-brand)] peer-checked:bg-[var(--ds-bg-brand-filled-default)]",
-            "peer-disabled:opacity-[var(--ds-opacity-disabled)] peer-disabled:cursor-not-allowed",
-            "peer-disabled:border-[var(--ds-border-strong)] peer-disabled:bg-transparent",
-            error
-              ? "border-[var(--ds-border-system-danger)]"
-              : "border-[var(--ds-border-strong)]",
-            className
-          )}
-        >
-          <span
-            className={cx(
-              "absolute inset-[2px] rounded-[var(--ds-radius-default)]",
-              "bg-[var(--ds-bg-brand-filled-default)]",
-              "opacity-0",
-              "peer-checked:opacity-100",
-              "group-data-[indeterminate=true]:opacity-100",
-              error && "bg-[var(--ds-bg-system-danger)]"
-            )}
-          />
-          <span
-            aria-hidden="true"
-            className={cx(
-              "relative z-[1] text-[var(--ds-text-invert)]",
-              "text-[var(--ds-text-sm)] leading-[var(--ds-text-sm)]",
-              "opacity-0",
-              "peer-checked:opacity-100",
-              "group-data-[indeterminate=true]:opacity-0"
-            )}
-          >
-            {icon ?? "✓"}
-          </span>
-          <span
-            aria-hidden="true"
-            className={cx(
-              "relative z-[1] text-[var(--ds-text-invert)]",
-              "text-[var(--ds-text-sm)] leading-[var(--ds-text-sm)]",
-              "opacity-0",
-              "group-data-[indeterminate=true]:opacity-100",
-              "peer-checked:opacity-0"
-            )}
-          >
-            {indeterminateIcon ?? "—"}
-          </span>
-        </span>
-        {label && (
-          <span className="text-[var(--ds-text-base)] leading-[var(--ds-text-2xl)] text-[var(--ds-text-primary)]">
-            {label}
+        {control}
+        {labelBlock && (
+          <span className={cx("inline-flex", checkboxPosition === "right" && "order-1")}>
+            {labelBlock}
           </span>
         )}
       </label>

@@ -32,7 +32,28 @@ export type InputProps = InputBaseProps & {
   optional?: boolean;
   state?: InputState;
   fullWidth?: boolean;
+  /** Left icon inside the input field. */
+  iconLeft?: React.ReactNode;
+  /** Right icon inside the input field. */
   iconRight?: React.ReactNode;
+  /** Inline addon before the input (inside the same border). */
+  addonLeft?: React.ReactNode;
+  /** Inline addon after the input (inside the same border). */
+  addonRight?: React.ReactNode;
+  /** Trailing content inside the input (e.g. keyboard shortcut). */
+  suffix?: React.ReactNode;
+  /** Right-aligned hint next to the label. */
+  cornerHint?: string;
+  /** Hide the visual label but keep it for accessibility. */
+  labelHidden?: boolean;
+  /** Label placement variant. */
+  labelPosition?: "top" | "inset" | "overlap";
+  /** Input shape. */
+  shape?: "default" | "pill";
+  /** Input visual variant. */
+  variant?: "default" | "underline";
+  /** Grouped input position for shared borders. */
+  groupPosition?: "single" | "start" | "middle" | "end";
   error?: boolean;
   filled?: boolean;
 };
@@ -86,6 +107,41 @@ const textColor: Record<InputState, string> = {
     "text-[var(--ds-input-readonly-text)] placeholder:text-[var(--ds-input-readonly-text)]"
 };
 
+const labelBackground: Record<InputState, string> = {
+  default: "bg-[var(--ds-input-default-bg)]",
+  hover: "bg-[var(--ds-input-hover-bg)]",
+  active: "bg-[var(--ds-input-active-bg)]",
+  filled: "bg-[var(--ds-input-filled-bg)]",
+  error: "bg-[var(--ds-input-error-bg)]",
+  disabled: "bg-[var(--ds-input-disabled-bg)]",
+  readonly: "bg-[var(--ds-input-readonly-bg)]"
+};
+
+const groupRadius: Record<NonNullable<InputProps["groupPosition"]>, string> = {
+  single: "rounded-[var(--ds-input-radius)]",
+  start: "rounded-l-[var(--ds-input-radius)] rounded-r-none",
+  middle: "rounded-none",
+  end: "rounded-r-[var(--ds-input-radius)] rounded-l-none"
+};
+
+const groupPositionClasses: Record<NonNullable<InputProps["groupPosition"]>, string> = {
+  single: "",
+  start: "",
+  middle: "-ml-[var(--ds-border-base)]",
+  end: "-ml-[var(--ds-border-base)]"
+};
+
+const variantClasses: Record<NonNullable<InputProps["variant"]>, string> = {
+  default: "",
+  underline:
+    "rounded-none border-0 border-b border-[var(--ds-input-default-border-color)] bg-[var(--ds-bg-layer200)]"
+};
+
+const shapeClasses: Record<NonNullable<InputProps["shape"]>, string> = {
+  default: "",
+  pill: "rounded-[var(--ds-radius-full)]"
+};
+
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   (
     {
@@ -94,7 +150,17 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
       helperText,
       optional,
       state,
+      iconLeft,
       iconRight,
+      addonLeft,
+      addonRight,
+      suffix,
+      cornerHint,
+      labelHidden,
+      labelPosition = "top",
+      shape = "default",
+      variant = "default",
+      groupPosition = "single",
       error,
       filled,
       disabled,
@@ -117,44 +183,118 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
             ? "filled"
             : state ?? "default";
 
+    const showLabel = Boolean(label);
+    const hasInline = Boolean(iconLeft || iconRight || suffix);
+    const inputPaddingX = "px-[var(--ds-input-padding-x)]";
+    const inputPaddingY = "py-[var(--ds-input-padding-y)]";
+
     return (
       <div className={cx("flex flex-col gap-[var(--ds-space-1)]", fullWidth && "w-full")}>
-        {label && (
-          <label
-            htmlFor={inputId}
-            className={cx("text-sm font-semibold", labelColor[resolvedState])}
+        {showLabel && labelPosition === "top" && (
+          <div className="flex items-center justify-between">
+            <label
+              htmlFor={inputId}
+              className={cx("text-sm font-semibold", labelColor[resolvedState], labelHidden && "sr-only")}
+            >
+              {label}
+              {optional && (
+                <span className="ml-[var(--ds-space-0_5)] text-xs text-[var(--ds-text-placeholder)]">
+                  (facultatif)
+                </span>
+              )}
+            </label>
+            {cornerHint && (
+              <span className="text-xs text-[var(--ds-text-secondary)]">{cornerHint}</span>
+            )}
+          </div>
+        )}
+
+        <div className="relative">
+          <div
+            className={cx(
+              "flex w-full items-stretch border border-solid",
+              "focus-within:outline focus-within:outline-[var(--ds-focus-ring-width)] focus-within:outline-[var(--ds-focus-ring-color)] focus-within:outline-offset-2",
+              stateClasses[resolvedState],
+              groupRadius[groupPosition],
+              groupPositionClasses[groupPosition],
+              shapeClasses[shape],
+              variantClasses[variant],
+              fullWidth && "w-full"
+            )}
           >
-            {label}
-            {optional && (
-              <span className="ml-[var(--ds-space-0_5)] text-xs text-[var(--ds-text-placeholder)]">
-                (facultatif)
+            {addonLeft && (
+              <span
+                className={cx(
+                  "inline-flex items-center border-r border-[var(--ds-border-default)]",
+                  inputPaddingX,
+                  inputPaddingY,
+                  "text-[var(--ds-text-secondary)]"
+                )}
+              >
+                {addonLeft}
               </span>
             )}
-          </label>
-        )}
-        <div className="relative">
-          <InputBase
-            id={inputId}
-            ref={ref}
-            aria-invalid={error || undefined}
-            aria-describedby={helperId}
-            disabled={disabled}
-            readOnly={readOnly}
-            className={cx(
-              "w-full rounded-[var(--ds-input-radius)] border border-solid px-[var(--ds-input-padding-x)] py-[var(--ds-input-padding-y)]",
-              "focus-visible:outline focus-visible:outline-[var(--ds-focus-ring-width)] focus-visible:outline-[var(--ds-focus-ring-color)] focus-visible:outline-offset-2",
-              stateClasses[resolvedState],
-              textColor[resolvedState],
-              className
+
+            <div className={cx("relative flex min-w-0 flex-1 items-center gap-[var(--ds-space-2)]", inputPaddingX, inputPaddingY)}>
+              {showLabel && labelPosition !== "top" && (
+                <label
+                  htmlFor={inputId}
+                  className={cx(
+                    "pointer-events-none absolute left-[var(--ds-input-padding-x)] text-xs",
+                    labelColor[resolvedState],
+                    labelHidden && "sr-only",
+                    labelPosition === "inset"
+                      ? "top-[var(--ds-space-1)]"
+                      : "top-[-6px] px-[var(--ds-space-1)]",
+                    labelPosition === "overlap" && labelBackground[resolvedState]
+                  )}
+                >
+                  {label}
+                </label>
+              )}
+
+              {iconLeft && <span className="text-[var(--ds-text-secondary)]">{iconLeft}</span>}
+
+              <InputBase
+                id={inputId}
+                ref={ref}
+                aria-invalid={error || undefined}
+                aria-describedby={helperId}
+                disabled={disabled}
+                readOnly={readOnly}
+                className={cx(
+                  "min-w-0 flex-1 bg-transparent outline-none",
+                  "border-0",
+                  textColor[resolvedState],
+                  className,
+                  hasInline && "placeholder:text-[var(--ds-text-placeholder)]",
+                  labelPosition !== "top" && "pt-[var(--ds-space-4)]"
+                )}
+                {...props}
+              />
+
+              {suffix && (
+                <span className="text-xs text-[var(--ds-text-secondary)]">{suffix}</span>
+              )}
+
+              {iconRight && <span className="text-[var(--ds-text-secondary)]">{iconRight}</span>}
+            </div>
+
+            {addonRight && (
+              <span
+                className={cx(
+                  "inline-flex items-center border-l border-[var(--ds-border-default)]",
+                  inputPaddingX,
+                  inputPaddingY,
+                  "text-[var(--ds-text-secondary)]"
+                )}
+              >
+                {addonRight}
+              </span>
             )}
-            {...props}
-          />
-          {iconRight && (
-            <span className="pointer-events-none absolute right-[var(--ds-space-2)] top-1/2 -translate-y-1/2">
-              {iconRight}
-            </span>
-          )}
+          </div>
         </div>
+
         {helperText && (
           <p id={helperId} className={cx("text-xs", helperColor[resolvedState])}>
             {helperText}

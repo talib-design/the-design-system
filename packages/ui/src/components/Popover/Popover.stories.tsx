@@ -52,3 +52,40 @@ export const Playground: Story = {
     );
   }
 };
+
+export const NearViewportEdges: Story = {
+  render: () => (
+    <div className="relative h-[80vh] w-full">
+      <div className="absolute left-[var(--ds-space-2)] top-[var(--ds-space-2)]">
+        <Popover defaultOpen>
+          <PopoverTrigger>
+            <Button size="small">Top left</Button>
+          </PopoverTrigger>
+          <PopoverContent>
+            <p className="text-[var(--ds-text-base)]">Popover content</p>
+          </PopoverContent>
+        </Popover>
+      </div>
+      <div className="absolute right-[var(--ds-space-2)] top-[var(--ds-space-2)]">
+        <Popover defaultOpen>
+          <PopoverTrigger>
+            <Button size="small">Top right</Button>
+          </PopoverTrigger>
+          <PopoverContent>
+            <p className="text-[var(--ds-text-base)]">Popover content</p>
+          </PopoverContent>
+        </Popover>
+      </div>
+      <div className="absolute bottom-[var(--ds-space-2)] left-1/2 -translate-x-1/2">
+        <Popover defaultOpen>
+          <PopoverTrigger>
+            <Button size="small">Bottom center</Button>
+          </PopoverTrigger>
+          <PopoverContent>
+            <p className="text-[var(--ds-text-base)]">Popover content</p>
+          </PopoverContent>
+        </Popover>
+      </div>
+    </div>
+  )
+};
