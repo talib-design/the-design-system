@@ -6,9 +6,9 @@ Ce Design System a été totalement généré par Gursor à partir de simples co
 
 ## Pourquoi ce projet
 L’objectif de ce projet est multiple : 
-1/ Transformer un kit UI (Figma + variables) en un Design System **codé**, réutilisable dans plusieurs apps, pour pouvoir implémenter des écrans rapidement sans repasser systématiquement par Figma.
-2/ Voir s'il est possible pour un designer de faire facilement des corrections sur des composants voir même sur des pages ou des parcours (en cours)
-3/ De manière générale, comprendre ce qu'on pouvait faire avec les MCP et mesurer l'impact que ça peut avoir sur nos métiers (ça a l'air lourd !)
+1. Transformer un kit UI (Figma + variables) en un Design System **codé**, réutilisable dans plusieurs apps, pour pouvoir implémenter des écrans rapidement sans repasser systématiquement par Figma.
+2. Voir s'il est possible pour un designer de faire facilement des corrections sur des composants voir même sur des pages ou des parcours (en cours)
+3. De manière générale, comprendre ce qu'on pouvait faire avec les MCP et mesurer l'impact que ça peut avoir sur nos métiers (ça a l'air lourd !)
 
 ## Ce que contient le repo
 - **Design tokens** : couleurs, typographies, espacements, radius, shadows… + mapping sémantique.
