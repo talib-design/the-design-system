@@ -45,11 +45,11 @@ L’objectif de ce projet est multiple :
 ## Next Steps
 - Le DS est pensé pour être **réutilisable** : Je voudrais qu'on voit si c'est possible de créer un vrai projet à partir de celui-ci.
 - Je voudrais avoir vos retours sur : 
-    • La qualité du code généré
-    • Vos avis sur l'impact de ce genre de pratiques sur nos métiers de développeurs et designers
+    - La qualité du code généré
+    - Vos avis sur l'impact de ce genre de pratiques sur nos métiers de développeurs et designers
 - Je vais creuser le sujet sur les liens entre un IDE et Figma pour :
-    • Lier le code aux composants dans le Mode Dev avec Figma Code
-    • Voir si la MAJ d'un composant dans Figma se fait facilement dans Git
+    - Lier le code aux composants dans le Mode Dev avec Figma Code
+    - Voir si la MAJ d'un composant dans Figma se fait facilement dans Git
 
 ##Merci d'avances pour vos feedbacks !!!
 
